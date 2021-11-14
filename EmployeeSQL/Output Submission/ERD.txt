@@ -1,0 +1,38 @@
+Below is the code for the ERD using https://app.quickdatabasediagrams.com/#/
+
+
+-----------------------------------------------------
+departments
+-
+dept_no PK string 
+dept_name string
+
+dept_emp
+-
+emp_no int FK >- employees.emp_no
+dept_no string FK >- departments.dept_no
+
+dept_manager
+-
+dept_no string FK >- departments.dept_no
+emp_no int FK >- employees.emp_no
+
+employees
+-
+emp_no int
+emp_title_id string FK >- titles.titles_id
+birth_date date
+first_name string
+last_name string
+sex string
+hire_date date
+
+salaries
+-
+emp_no int FK >- employees.emp_no
+salary int
+
+titles 
+-
+titles_id string
+title string
